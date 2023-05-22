@@ -79,4 +79,15 @@ RSpec.describe "user registration page", type: :feature do
       expect(User.all.count).to eq(0)
     end
   end
+
+  describe 'login' do
+    it 'has a link to log in' do
+      visit '/register'
+
+      expect(page).to have_link("Log In")
+      click_link "Log In"
+
+      expect(current_path).to eq('/login')
+    end
+  end
 end
