@@ -27,48 +27,48 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 12 May 2023 19:02:56 GMT
+      - Mon, 22 May 2023 17:21:27 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=28043
+      - public, max-age=28718
       X-Memc:
-      - MISS, STORE
+      - HIT
       X-Memc-Key:
       - '09949b3dca2fa5036a98f7324cb7c469'
       X-Memc-Age:
-      - '0'
+      - '5907'
       X-Memc-Expires:
-      - '28043'
+      - '16215'
       Etag:
-      - W/"43cc06a8fa25b4c0d72855e509fe617d"
+      - W/"8a7bbbe71abb08dd97465b716dcebbc8"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 dbb24f3b9579454525416ef48c0f512c.cloudfront.net (CloudFront)
+      - 1.1 48a6ccbb0ddb052ab512a3422295bd38.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - DEN52-P3
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - RB6lq0leD86ABS15mS52A9O3yd_hNLaw4aLW6oSTVvGfcr2qARf3ig==
+      - wLqb7MMQN0d-Ue1Ye3bKxt-chxOJ4b_7BJQdXAIFRu_wL7SV0HiqsA==
       Age:
-      - '6993'
+      - '9346'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/5SwoNJ5o2dEOdABCHdqM4siMhqt.jpg","genre_ids":[35,18],"id":701189,"original_language":"en","original_title":"Query","overview":"A
         leisurely day belies its uninvited end as Jay and Alex, best friends and roommates,
-        challenge one another on their opinions of sexuality.","popularity":2.166,"poster_path":"/vGTahyg0SX9cejcKj9P14NqXdgg.jpg","release_date":"2020-04-15","title":"Query","video":false,"vote_average":5.0,"vote_count":16},{"adult":false,"backdrop_path":"/oBmgFY9ZMzMfNYfhbsUYvinDpee.jpg","genre_ids":[],"id":1017678,"original_language":"es","original_title":"31
+        challenge one another on their opinions of sexuality.","popularity":1.214,"poster_path":"/vGTahyg0SX9cejcKj9P14NqXdgg.jpg","release_date":"2020-04-15","title":"Query","video":false,"vote_average":5.0,"vote_count":16},{"adult":false,"backdrop_path":"/oBmgFY9ZMzMfNYfhbsUYvinDpee.jpg","genre_ids":[],"id":1017678,"original_language":"es","original_title":"31
         Minutos: Cuarentena 31 y Querido Diario (La Serie Completa)","overview":"The
         star journalist of 31 Minutos, Juan Carlos Bodoque has to lock himself in
-        his house due to the COVID-19 pandemic","popularity":0.628,"poster_path":"/3wEAd6bnz2EAu7Kt2k3e5HOslpx.jpg","release_date":"2021-11-12","title":"31
+        his house due to the COVID-19 pandemic","popularity":0.6,"poster_path":"/3wEAd6bnz2EAu7Kt2k3e5HOslpx.jpg","release_date":"2021-11-12","title":"31
         Minutos: Cuarentena 31 \u0026 Querido Diario (The Complete Series)","video":false,"vote_average":0.0,"vote_count":0},{"adult":false,"backdrop_path":null,"genre_ids":[53,18],"id":426977,"original_language":"en","original_title":"Murder
         in Reverse?","overview":"Tom Masterick, a dock worker, is wrongfully convicted
         of a murder charge. His death sentence is commuted to a long prison term.
-        When released as an old man, he vows to find the real killer.","popularity":0.743,"poster_path":"/fl13KK3qG1ReCChHCU2qyai8oij.jpg","release_date":"1945-10-21","title":"Murder
+        When released as an old man, he vows to find the real killer.","popularity":0.666,"poster_path":"/fl13KK3qG1ReCChHCU2qyai8oij.jpg","release_date":"1945-10-21","title":"Murder
         in Reverse?","video":false,"vote_average":6.0,"vote_count":2}],"total_pages":1,"total_results":3}'
-  recorded_at: Fri, 12 May 2023 20:59:29 GMT
+  recorded_at: Mon, 22 May 2023 19:57:13 GMT
 recorded_with: VCR 6.1.0

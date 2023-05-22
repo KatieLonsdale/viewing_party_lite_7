@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "/users/:user_id/discover", to: "movies#discover"
   get "/users/:user_id/movies", to: "movies#index"
   get "/user_parties/create", to: "user_parties#create"
+  get "/login", to: "users#login_form"
+  post "/login", to: "users#login_user"
 
   resources :users, only: [:create]
 

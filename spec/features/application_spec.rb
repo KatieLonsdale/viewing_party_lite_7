@@ -10,9 +10,9 @@ require 'rails_helper'
 RSpec.describe "landing page" do
   describe "as a user, when I visit the landing page" do
     before(:each) do
-      @user_1 = User.create!(name: "Katie", email: "email_address@gmail.com")
-      @user_2 = User.create!(name: "Steve", email: "email_address_2@gmail.com")
-      @user_3 = User.create!(name: "Stacey", email: "email_address_3@gmail.com")
+      @user_1 = User.create!(name: "Katie", email: "email_address@gmail.com", password: "pass123")
+      @user_2 = User.create!(name: "Steve", email: "email_address_2@gmail.com", password: "pass123")
+      @user_3 = User.create!(name: "Stacey", email: "email_address_3@gmail.com", password: "pass123")
       @users = [@user_1, @user_2, @user_3]
       visit root_path
     end
@@ -45,6 +45,19 @@ RSpec.describe "landing page" do
         click_link "Home"
       end
       expect(current_path).to eq(root_path)
+    end
+
+    it "has a link to log in" do
+      within("#login") do
+        expect(page).to have_link("Log In")
+      end
+    end
+
+    it "brings you to login page" do
+      within("#login") do
+        click_link("Log In")
+        expect(current_path).to eq("/login")
+      end
     end
   end
 end
