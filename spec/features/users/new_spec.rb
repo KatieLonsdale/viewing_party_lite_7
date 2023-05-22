@@ -66,5 +66,17 @@ RSpec.describe "user registration page", type: :feature do
       expect(current_path).to eq('/register')
       expect(page).to have_content("All fields must be filled out and email must be unique")
     end
+
+    it "passwords don't match" do
+      visit '/register'
+
+      fill_in("Password", with: "password123")
+      fill_in("Password Confirmation", with: "differentpassword")
+      click_button("Create User")
+
+      expect(current_path).to eq('/register')
+      expect(page).to have_content("Passwords must match")
+      expect(User.all.count).to eq(0)
+    end
   end
 end
