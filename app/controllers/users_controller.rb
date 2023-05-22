@@ -23,6 +23,11 @@ class UsersController < ApplicationController
   end
 
   def login_form; end
+
+  def login_user
+    user = User.find_by(email: params[:email])
+    redirect_to (("/users/#{user.id}"))
+  end
   
   private
 
