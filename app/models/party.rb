@@ -13,7 +13,7 @@ class Party < ApplicationRecord
   end
 
   def guests
-    users.joins(:user_parties).where("user_parties.is_host=false").distinct
+    users.joins(:user_parties).where("user_parties.is_host=false").distinct.order(:id)
   end
 
   def format_date
