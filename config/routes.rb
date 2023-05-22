@@ -18,4 +18,6 @@ Rails.application.routes.draw do
       resources :parties, only: [:new, :create]
     end
   end
+
+  get "/login", to: "users#login_form"
 end
