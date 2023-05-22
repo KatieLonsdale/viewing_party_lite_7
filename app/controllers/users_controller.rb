@@ -4,9 +4,12 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
+  def create 
     @user = User.new(user_params)
-    if @user.save
+    if user_params[:password] != user_params[:password_confirmation]
+      redirect_to "/register"
+      flash[:alert] = "Passwords must match"
+    elsif @user.save
       redirect_to "/users/#{@user.id}"
     else
       redirect_to "/register"
