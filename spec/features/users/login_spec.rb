@@ -14,4 +14,16 @@ RSpec.describe 'login page' do
       expect(current_path).to eq("/users/#{@user_1.id}")
     end
   end
+  it 'flashes an error if my credentials are not correct' do
+    test_data
+    visit '/login'
+
+    fill_in "Email", with: @user_1.email
+    fill_in "Password", with: 'incorrect password'
+
+    click_button "Log In"
+
+    expect(current_path).to eq("/login")
+    expect(page).to have_content("Incorrect credentials.")
+  end
 end
