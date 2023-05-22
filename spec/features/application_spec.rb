@@ -10,9 +10,9 @@ require 'rails_helper'
 RSpec.describe "landing page" do
   describe "as a user, when I visit the landing page" do
     before(:each) do
-      @user_1 = User.create!(name: "Katie", email: "email_address@gmail.com")
-      @user_2 = User.create!(name: "Steve", email: "email_address_2@gmail.com")
-      @user_3 = User.create!(name: "Stacey", email: "email_address_3@gmail.com")
+      @user_1 = User.create!(name: "Katie", email: "email_address@gmail.com", password: "test123", password_confirmation: "test123")
+      @user_2 = User.create!(name: "Steve", email: "email_address_2@gmail.com", password: "test123", password_confirmation: "test123")
+      @user_3 = User.create!(name: "Stacey", email: "email_address_3@gmail.com", password: "test123", password_confirmation: "test123")
       @users = [@user_1, @user_2, @user_3]
       visit root_path
     end
