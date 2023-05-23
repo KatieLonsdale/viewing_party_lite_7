@@ -1,8 +1,13 @@
 class PartiesController < ApplicationController
   def new
-    @user = User.find(params[:user_id])
-    @movie = MovieFacade.new.find_movie(params[:movie_id])
-    @users = User.all
+    if !current_user
+      flash[:alert] = "You must be logged in to access your dashboard"
+      redirect_to user_movie_path(params[:user_id], params[:movie_id])
+    else
+      @user = User.find(params[:user_id])
+      @movie = MovieFacade.new.find_movie(params[:movie_id])
+      @users = User.all
+    end
   end
 
   def create
