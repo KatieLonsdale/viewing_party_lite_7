@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= link_to "Log Out", session_path(current_user.id), method: :delete %>
+  <%= button_to "Log Out", session_path(current_user.id), method: :delete %>
 <% else %>
   <div id="new-user">
     <%= button_to "Create New User", "/register", method: :get %>
