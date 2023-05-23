@@ -72,7 +72,7 @@ RSpec.describe "landing page" do
       click_button "Log In"
       
       visit root_path
-      click_link("Log Out")
+      click_button("Log Out")
       expect(current_path).to eq(root_path)
       expect(page).to have_content("Log In")
       expect(page).to have_content("Create New User")
