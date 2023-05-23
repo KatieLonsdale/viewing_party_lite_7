@@ -27,36 +27,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 22 May 2023 17:10:28 GMT
+      - Tue, 23 May 2023 19:01:46 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=22098
+      - public, max-age=28712
       X-Memc:
       - HIT
       X-Memc-Key:
       - 9d48db5c244b9c3e3d162ef155211175
       X-Memc-Age:
-      - '23039'
+      - '14547'
       X-Memc-Expires:
-      - '1046'
+      - '13294'
       Etag:
-      - W/"d4f79b5411917121ef495eba25942fb7"
+      - W/"72131351162685cd78d91f2402e43ad7"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 ac79b9352835edad28c9b0bc7dd7f8b0.cloudfront.net (CloudFront)
+      - 1.1 a47d45d25cc354507eae77aba89ca252.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - DEN52-P2
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - AwN4gX7dIk13mMtG9saFygfmrMs1xT3HK1gFn31rFA7rCIp4S2hKSQ==
+      - Z9cmVfVSFKKSkuQRY-8MnhoNny2E2I8v7RB6mllcrLUjf-AG4HOXbw==
       Age:
-      - '658'
+      - '8746'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/tmU7GeKVybMWFButWEGl2M4GeiP.jpg","belongs_to_collection":{"id":230,"name":"The
@@ -65,11 +65,11 @@ http_interactions:
         fictional Italian-American Corleone crime family. When organized crime family
         patriarch, Vito Corleone barely survives an attempt on his life, his youngest
         son, Michael steps in to take care of the would-be killers, launching a campaign
-        of bloody revenge.","popularity":144.071,"poster_path":"/3bhkrj58Vtu7enYsRolD1fZdja1.jpg","production_companies":[{"id":4,"logo_path":"/gz66EfNoYPqHTYI4q9UEN4CbHRc.png","name":"Paramount","origin_country":"US"},{"id":10211,"logo_path":null,"name":"Alfran
+        of bloody revenge.","popularity":114.411,"poster_path":"/3bhkrj58Vtu7enYsRolD1fZdja1.jpg","production_companies":[{"id":4,"logo_path":"/gz66EfNoYPqHTYI4q9UEN4CbHRc.png","name":"Paramount","origin_country":"US"},{"id":10211,"logo_path":null,"name":"Alfran
         Productions","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1972-03-14","revenue":245066411,"runtime":175,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"},{"english_name":"Italian","iso_639_1":"it","name":"Italiano"},{"english_name":"Latin","iso_639_1":"la","name":"Latin"}],"status":"Released","tagline":"An
-        offer you can''t refuse.","title":"The Godfather","video":false,"vote_average":8.711,"vote_count":17944}'
-  recorded_at: Mon, 22 May 2023 17:21:26 GMT
+        offer you can''t refuse.","title":"The Godfather","video":false,"vote_average":8.711,"vote_count":17951}'
+  recorded_at: Tue, 23 May 2023 21:27:32 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/550?language=en-US
@@ -97,36 +97,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 22 May 2023 17:10:28 GMT
+      - Tue, 23 May 2023 19:07:03 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=23979
+      - public, max-age=26603
       X-Memc:
       - HIT
       X-Memc-Key:
       - 86a19bcac53cd02291bef63cf5445bc3
       X-Memc-Age:
-      - '16481'
+      - '3464'
       X-Memc-Expires:
-      - '12259'
+      - '22188'
       Etag:
-      - W/"18871f74f6c4e9740ae378e5cdad4dc4"
+      - W/"33fc4956b3f3eff5385bd3f68924f408"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 8a50fe9452625079391cf0ce7a3e0c56.cloudfront.net (CloudFront)
+      - 1.1 23d87d8c2ce38e34462e6c134d187eea.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - DEN52-P2
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - fHOMkrjkYV8km6VEdHDJqpklhHtA-zK5BqtdLnL6ucAbtFwB6lgD-Q==
+      - pINbMcdDRY5e1MRNuH9uhl0xWdyVu9xSZJVFsJRpSY3sS4_G9yUptw==
       Age:
-      - '658'
+      - '8429'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/hZkgoQYus5vegHoetLkCJzb17zJ.jpg","belongs_to_collection":null,"budget":63000000,"genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"},{"id":35,"name":"Comedy"}],"homepage":"http://www.foxmovies.com/movies/fight-club","id":550,"imdb_id":"tt0137523","original_language":"en","original_title":"Fight
@@ -134,7 +134,7 @@ http_interactions:
         channel primal male aggression into a shocking new form of therapy. Their
         concept catches on, with underground \"fight clubs\" forming in every town,
         until an eccentric gets in the way and ignites an out-of-control spiral toward
-        oblivion.","popularity":77.136,"poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg","production_companies":[{"id":508,"logo_path":"/7cxRWzi4LsVm4Utfpr1hfARNurT.png","name":"Regency
+        oblivion.","popularity":74.721,"poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg","production_companies":[{"id":508,"logo_path":"/7cxRWzi4LsVm4Utfpr1hfARNurT.png","name":"Regency
         Enterprises","origin_country":"US"},{"id":711,"logo_path":"/tEiIH5QesdheJmDAqQwvtN60727.png","name":"Fox
         2000 Pictures","origin_country":"US"},{"id":20555,"logo_path":"/hD8yEGUBlHOcfHYbujp71vD8gZp.png","name":"Taurus
         Film","origin_country":"DE"},{"id":54051,"logo_path":null,"name":"Atman Entertainment","origin_country":""},{"id":54052,"logo_path":null,"name":"Knickerbocker
@@ -142,6 +142,6 @@ http_interactions:
         Linson Company","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1999-10-15","revenue":100853753,"runtime":139,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Mischief.
-        Mayhem. Soap.","title":"Fight Club","video":false,"vote_average":8.434,"vote_count":26432}'
-  recorded_at: Mon, 22 May 2023 17:21:26 GMT
+        Mayhem. Soap.","title":"Fight Club","video":false,"vote_average":8.434,"vote_count":26436}'
+  recorded_at: Tue, 23 May 2023 21:27:32 GMT
 recorded_with: VCR 6.1.0
