@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/login", to: "users#login_form"
-  post '/login', to: 'users#login_user'
+  resources :sessions, only: [:new, :create, :destroy]
+
+  # get "/login", to: "users#login_form"
+  # post '/login', to: 'users#login_user'
 end
