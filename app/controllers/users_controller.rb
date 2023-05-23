@@ -19,22 +19,14 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @user = User.find(params[:user_id])
-    @facade = MovieFacade.new
+    if !current_user
+      flash[:alert] = "You must be logged in to access your dashboard"
+      redirect_to root_path
+    else
+      @user = User.find(params[:user_id])
+      @facade = MovieFacade.new
+    end
   end
-
-  # def login_form; end
-
-  # def login_user
-  #   user = User.find_by(email: params[:email])
-  #   if user.authenticate(params[:password])
-  #     session[:user_id] = user.id
-  #     redirect_to ("/users/#{user.id}")
-  #   else
-  #     redirect_to('/login')
-  #     flash[:alert] = "Incorrect credentials."
-  #   end
-  # end
 
   private
 
