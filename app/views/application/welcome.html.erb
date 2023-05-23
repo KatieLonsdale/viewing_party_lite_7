@@ -9,8 +9,10 @@
   </div>
 <% end %>
 <br>
-<div id="users">
-  <% @users.each do |user| %>
-    <%= link_to "#{user.email}", "users/#{user.id}" %> <br>
-  <% end %>
-</div>
+<% if current_user %>
+  <div id="users">
+    <% @users.each do |user| %>
+      <%= link_to "#{user.email}", "users/#{user.id}" %> <br>
+    <% end %>
+  </div>
+<% end %>
