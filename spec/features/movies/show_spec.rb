@@ -78,7 +78,7 @@ RSpec.describe "Movie Detail page" do
       visit user_movie_path(@user_1.id, @movie.id)
       click_button "Create Viewing Party for #{@movie.title}"
       expect(current_path).to eq(user_movie_path(@user_1.id, @movie.id))
-      expect(page).to have_content("You must be logged in to access your dashboard")
+      expect(page).to have_content("You must be logged in to create a viewing party")
     end
   end
 end
