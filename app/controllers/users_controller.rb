@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       redirect_to "/register"
       flash[:alert] = "Passwords must match"
     elsif @user.save
+      session[:user_id] = @user.id
       redirect_to "/users/#{@user.id}"
     else
       redirect_to "/register"
