@@ -1,7 +1,7 @@
 class PartiesController < ApplicationController
   def new
     if !current_user
-      flash[:alert] = "You must be logged in to access your dashboard"
+      flash[:alert] = "You must be logged in to create a viewing party"
       redirect_to user_movie_path(params[:user_id], params[:movie_id])
     else
       @user = User.find(params[:user_id])
