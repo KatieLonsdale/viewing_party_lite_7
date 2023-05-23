@@ -12,7 +12,7 @@
 <% if current_user %>
   <div id="users">
     <% @users.each do |user| %>
-      <%= link_to "#{user.email}", "users/#{user.id}" %> <br>
+      <%= "#{user.email}" %> <br>
     <% end %>
   </div>
 <% end %>
