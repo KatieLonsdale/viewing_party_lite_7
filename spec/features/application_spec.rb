@@ -23,8 +23,11 @@ RSpec.describe "landing page" do
       expect(current_path).to eq("/register")
     end
     it "has a list of existing users which links to the user dashboard" do
-      within("#users") do
-        @users.each do |user|
+      
+      @users.each do |user|
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        visit root_path
+        within("#users") do
           expect(page).to have_link(user.email.to_s)
           click_link(user.email.to_s)
           expect(current_path).to eq("/users/#{user.id}")
@@ -76,6 +79,15 @@ RSpec.describe "landing page" do
       expect(current_path).to eq(root_path)
       expect(page).to have_content("Log In")
       expect(page).to have_content("Create New User")
+    end
+  end
+  describe 'as a logged out user/visitor' do
+    it 'does not show me the list of existing users' do
+      test_data
+      visit root_path
+      expect(page).to have_no_content(@user_1.email)
+      expect(page).to have_no_content(@user_2.email)
+      expect(page).to have_no_content(@user_3.email)
     end
   end
 end
