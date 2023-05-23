@@ -1,10 +1,3 @@
-# When a user visits the root path they should be on the landing page ('/') which includes:
-
-#  Title of Application
-#  Button to Create a New User
-#  List of Existing Users which links to the users dashboard
-#  Link to go back to the landing page (this link will be present at the top of all pages)
-
 require 'rails_helper'
 
 RSpec.describe "landing page" do
@@ -56,7 +49,33 @@ RSpec.describe "landing page" do
         click_link "Log In"
       end
 
-      expect(current_path).to eq('/login')
+      expect(current_path).to eq(new_session_path)
+    end
+  end
+  describe 'as a logged in user' do
+    it 'no longer has a link to log in or create account, but has link to log out' do
+      user = User.create!(name: "Katie", email: "email_address@gmail.com", password: "test123", password_confirmation: "test123")
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      visit root_path
+      expect(page).to have_no_content("Log In")
+      expect(page).to have_no_content("Create New User")
+      expect(page).to have_content("Log Out")
+    end
+    it 'when I log out, I return to landing page and the login link is back' do
+      user = User.create!(name: "Katie", email: "email_address@gmail.com", password: "test123", password_confirmation: "test123")
+      visit new_session_path
+
+      fill_in "Email", with: user.email
+      fill_in "Password", with: user.password
+
+      click_button "Log In"
+      
+      visit root_path
+      click_link("Log Out")
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content("Log In")
+      expect(page).to have_content("Create New User")
     end
   end
 end
