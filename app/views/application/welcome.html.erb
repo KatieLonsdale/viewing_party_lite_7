@@ -1,9 +1,13 @@
-<div id="new-user">
-  <%= button_to "Create New User", "/register", method: :get %>
-</div>
-<div id="log_in">
-  <%= link_to "Log In", new_session_path %>
-</div>
+<% if current_user %>
+  <%= link_to "Log Out", session_path(current_user.id), method: :delete %>
+<% else %>
+  <div id="new-user">
+    <%= button_to "Create New User", "/register", method: :get %>
+  </div>
+  <div id="log_in">
+    <%= link_to "Log In", new_session_path %>
+  </div>
+<% end %>
 <br>
 <div id="users">
   <% @users.each do |user| %>
