@@ -46,15 +46,17 @@ http_interactions:
       - Accept-Encoding
       - Origin
       X-Cache:
-      - Miss from cloudfront
+      - Hit from cloudfront
       Via:
-      - 1.1 a44b9db7a2d103360945ab52619e5016.cloudfront.net (CloudFront)
+      - 1.1 e7ff4a714a3b1f464db9c76ee954a564.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - ij73GuZMq-gvUU0lMdo2NMv0aD6EPBvlLq_N5znUEg21Qo1KDow1bA==
+      - rbk7NcpiIsXWVuLUb-KYAYtXWnBZJ2nRIKGkI7DReq00BN3UKOxw-g==
+      Age:
+      - '1803'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/5SwoNJ5o2dEOdABCHdqM4siMhqt.jpg","genre_ids":[35,18],"id":701189,"original_language":"en","original_title":"Query","overview":"A
@@ -68,5 +70,5 @@ http_interactions:
         of a murder charge. His death sentence is commuted to a long prison term.
         When released as an old man, he vows to find the real killer.","popularity":0.661,"poster_path":"/fl13KK3qG1ReCChHCU2qyai8oij.jpg","release_date":"1945-10-21","title":"Murder
         in Reverse?","video":false,"vote_average":6.0,"vote_count":2}],"total_pages":1,"total_results":3}'
-  recorded_at: Tue, 23 May 2023 21:27:33 GMT
+  recorded_at: Tue, 23 May 2023 21:57:36 GMT
 recorded_with: VCR 6.1.0
