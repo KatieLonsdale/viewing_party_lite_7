@@ -1,12 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Movie Detail page" do
-  before(:each) do
-    test_data
-    test_movie_details
-    @movie = Movie.new(@data)
-  end
   describe "As a user, when I visit a movie's show page" do
+    before(:each) do
+      test_data
+      test_movie_details
+      @movie = Movie.new(@data)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
+    end
     it "has a button to create a viewing party", :vcr do
       visit user_movie_path(@user_1.id, @movie.id)
 
@@ -66,6 +67,18 @@ RSpec.describe "Movie Detail page" do
           expect(page).to have_content("Pretty awesome movie. It shows what one crazy person can convince other crazy people to do. Everyone needs something to believe in. I recommend Jesus Christ, but they want Tyler Durden.")
         end
       end
+    end
+  end
+  describe 'as a logged out user/visitor' do
+    it 'does not allow me to create a viewing party', :vcr do
+      test_data
+      test_movie_details
+      @movie = Movie.new(@data)
+      
+      visit user_movie_path(@user_1.id, @movie.id)
+      click_button "Create Viewing Party for #{@movie.title}"
+      expect(current_path).to eq(user_movie_path(@user_1.id, @movie.id))
+      expect(page).to have_content("You must be logged in to access your dashboard")
     end
   end
 end
