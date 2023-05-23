@@ -28,9 +28,7 @@ RSpec.describe "landing page" do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         visit root_path
         within("#users") do
-          expect(page).to have_link(user.email.to_s)
-          click_link(user.email.to_s)
-          expect(current_path).to eq("/users/#{user.id}")
+          expect(page).to have_content(user.email.to_s)
           visit root_path
         end
       end
@@ -88,6 +86,13 @@ RSpec.describe "landing page" do
       expect(page).to have_no_content(@user_1.email)
       expect(page).to have_no_content(@user_2.email)
       expect(page).to have_no_content(@user_3.email)
+    end
+    it 'does not allow me to access my dashboard' do
+      user = User.create!(name: "Katie", email: "email_address@gmail.com", password: "test123", password_confirmation: "test123")
+      visit "/users/#{user.id}"
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content("You must be logged in to access your dashboard")
     end
   end
 end
