@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "New Viewing party page" do
   describe "display" do
-    before do
+    before(:each) do
       test_data
       test_movie_details
       @movie_1 = Movie.new(@data)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
     end
 
     it "has a form with all necessary fields", :vcr do
@@ -33,6 +34,7 @@ RSpec.describe "New Viewing party page" do
       test_data
       test_movie_details
       @movie_1 = Movie.new(@data)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
     end
 
     it "creates viewing party", :vcr do
