@@ -8,6 +8,6 @@ class UserPartiesController < ApplicationController
       end
     end
 
-    redirect_to "/users/#{params[:party_host]}"
+    redirect_to "/dashboard"
   end
 end
