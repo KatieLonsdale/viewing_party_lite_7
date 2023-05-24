@@ -16,8 +16,9 @@ RSpec.describe "user dashboard page", type: :feature do
     end
 
     it "has user's name, a discover button, and a party viewing section", :vcr do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
-      visit "/users/#{@user_1.id}"
+      sign_in_as(@user_1)
+
+      visit "/dashboard"
 
       expect(page).to have_content("User 1's Dashboard")
       expect(page).to have_button("Discover Movies")
@@ -30,8 +31,9 @@ RSpec.describe "user dashboard page", type: :feature do
     end
 
     it "lists viewing parties that I am invited to with VP info", :vcr do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_3)
-      visit "/users/#{@user_3.id}"
+      sign_in_as(@user_3)
+
+      visit "/dashboard"
 
       within("#hosted-vps") do
         expect(page).to have_content("Fight Club")
@@ -53,8 +55,9 @@ RSpec.describe "user dashboard page", type: :feature do
     end
 
     it "has movie titles linked to their show page", :vcr do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_3)
-      visit "/users/#{@user_3.id}"
+      sign_in_as(@user_3)
+
+      visit "/dashboard"
 
       click_link "Fight Club"
       expect(current_path).to eq(user_movie_path(@user_3.id, 550))
