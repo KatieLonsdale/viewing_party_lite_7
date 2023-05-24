@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       flash[:alert] = "Passwords must match"
     elsif @user.save
       session[:user_id] = @user.id
-      redirect_to "/users/#{@user.id}"
+      redirect_to "/dashboard"
     else
       redirect_to "/register"
       flash[:alert] = "All fields must be filled out and email must be unique"
