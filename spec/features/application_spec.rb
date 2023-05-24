@@ -89,7 +89,7 @@ RSpec.describe "landing page" do
     end
     it 'does not allow me to access my dashboard' do
       user = User.create!(name: "Katie", email: "email_address@gmail.com", password: "test123", password_confirmation: "test123")
-      visit "/users/#{user.id}"
+      visit "/dashboard"
 
       expect(current_path).to eq(root_path)
       expect(page).to have_content("You must be logged in to access your dashboard")
