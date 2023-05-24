@@ -94,6 +94,13 @@ def test_data
   @user_5 = User.create!(name: "User 5", email: "email5@email.com", password: 'password123', password_confirmation: 'password123')
 end
 
+def sign_in_as(user)
+  visit new_session_path
+  fill_in "Email", with: user.email
+  fill_in "Password", with: user.password
+  click_button "Log In"
+end
+
 def test_movie
   @data = {
     "adult": false,
