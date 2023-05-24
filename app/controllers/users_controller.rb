@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       flash[:alert] = "You must be logged in to access your dashboard"
       redirect_to root_path
     else
-      @user = User.find(params[:user_id])
+      @user = User.find(session[:user_id])
       @facade = MovieFacade.new
     end
   end
