@@ -33,7 +33,7 @@ This application was clearly designed by two backend developers!
 
 ![Movie Show Page](/app/assets/images/movie_show_page.png "Movie Show Page")
 
-![Search Results](/app/assets/images/movie_show_page.png "Search Results")
+![Search Results](/app/assets/images/search_results.png "Search Results")
 
 
 ## Contributors
