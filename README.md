@@ -29,11 +29,11 @@ This README provides an overview of the application, screenshots, and key featur
 
 This application was clearly designed by two backend developers!
 
-![User Dashboard](/assets/images/user_dashboard.png "User Dashboard")
+![User Dashboard](/app/assets/images/user_dashboard.png "User Dashboard")
 
-![Movie Show Page](/assets/images/movie_show_page.png "Movie Show Page")
+![Movie Show Page](/app/assets/images/movie_show_page.png "Movie Show Page")
 
-![Search Results](/assets/images/movie_show_page.png "Search Results")
+![Search Results](/app/assets/images/movie_show_page.png "Search Results")
 
 
 ## Contributors
