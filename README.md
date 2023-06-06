@@ -1,22 +1,47 @@
 # Viewing Party
 
-This is the base repo for the [Viewing Party Lite project](https://backend.turing.edu/module3/projects/viewing_party_lite) used for Turing's Backend Module 3.
+Viewing Party is an application that allows users to create and organize movie viewing parties with their friends. Users can browse movies, search by movie title, and browse top-rated movies. They can also check out reviews for movies.
 
-### About this Project
+This README provides an overview of the application, screenshots, and key features.
 
-Viewing Party Lite is an application in which users can explore movie options and create a viewing party event for themselves and other users of the application.
+## Table of Contents
 
-## Setup
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Contributors](#contributors)
+- [Versions](#versions)
 
-1. Fork and Clone the repo
-2. Install gem packages: `bundle install`
-3. Setup the database: `rails db:create`
+## Features
 
+- **Movie Search:** Users can search for movies by title to find specific movies they want to create viewing parties for.
+
+- **Top Rated Movies:** Users can browse a list of top-rated movies to discover popular and highly-rated movies.
+
+- **Movie Details:** Users can view detailed information about a movie, including cast, characters, description, duration, and genre.
+
+- **Reviews:** Users can read reviews for movies, providing them with insights and opinions from others.
+
+- **Create Viewing Parties:** Users can create viewing party events and invite their friends to join. They can set the date and time for the party.
+
+- **Viewing Party Details:** Users can view the details of a viewing party, including the movie being watched, the date and time, the invited guests, and whether or not they are hosting.
+
+## Screenshots
+
+This application was clearly designed by two backend developers!
+
+![User Dashboard](/assets/images/user_dashboard.png "User Dashboard")
+
+![Movie Show Page](/assets/images/movie_show_page.png "Movie Show Page")
+
+![Search Results](/assets/images/movie_show_page.png "Search Results")
+
+
+## Contributors
+- [Katie Lonsdale](https://www.linkedin.com/in/katherine-lonsdale-7b215185/)
+- [Dyson Breakstone](https://www.linkedin.com/in/dyson-breakstone-4978291a2/)
 
 ## Versions
 
 - Ruby 3.1.1
 
 - Rails 7.0.4
-
-Example wireframes to follow are found [here](https://backend.turing.edu/module3/projects/viewing_party_lite/wireframes)
